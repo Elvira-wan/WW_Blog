@@ -1,0 +1,20 @@
+{
+  "name": "WW",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.8.2",
+    "vuepress-plugin-baidu-autopush": "^1.0.1"
+  },
+  "homepage": "",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "dependencies": {
+    "@vssue/api-github-v3": "^1.4.7",
+    "@vssue/vuepress-plugin-vssue": "^1.4.8",
+    "vuepress-plugin-code-copy": "^1.0.6"
+  }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一些熟悉的手写函数 | WW&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    <meta name="description" content="小万的学习日记">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.81d09c15.js" as="script"><link rel="preload" href="/assets/js/2.8398b084.js" as="script"><link rel="preload" href="/assets/js/40.4f536509.js" as="script"><link rel="prefetch" href="/assets/js/10.fec0f110.js"><link rel="prefetch" href="/assets/js/11.172fa010.js"><link rel="prefetch" href="/assets/js/12.614f5769.js"><link rel="prefetch" href="/assets/js/13.4d0b052d.js"><link rel="prefetch" href="/assets/js/14.a6aed245.js"><link rel="prefetch" href="/assets/js/15.bf0bd6bd.js"><link rel="prefetch" href="/assets/js/16.1e1ce84e.js"><link rel="prefetch" href="/assets/js/17.5372094f.js"><link rel="prefetch" href="/assets/js/18.f7f86485.js"><link rel="prefetch" href="/assets/js/19.1243f2f5.js"><link rel="prefetch" href="/assets/js/20.028a6a0e.js"><link rel="prefetch" href="/assets/js/21.edde94d8.js"><link rel="prefetch" href="/assets/js/22.3736cae0.js"><link rel="prefetch" href="/assets/js/23.cbb27253.js"><link rel="prefetch" href="/assets/js/24.94fc5442.js"><link rel="prefetch" href="/assets/js/25.440faeee.js"><link rel="prefetch" href="/assets/js/26.64fd4f6b.js"><link rel="prefetch" href="/assets/js/27.0eca257c.js"><link rel="prefetch" href="/assets/js/28.d8486f43.js"><link rel="prefetch" href="/assets/js/29.42771179.js"><link rel="prefetch" href="/assets/js/3.521449cd.js"><link rel="prefetch" href="/assets/js/30.6200edbd.js"><link rel="prefetch" href="/assets/js/31.02ff8206.js"><link rel="prefetch" href="/assets/js/32.c40dca37.js"><link rel="prefetch" href="/assets/js/33.1355034e.js"><link rel="prefetch" href="/assets/js/34.f38a6a21.js"><link rel="prefetch" href="/assets/js/35.c540498a.js"><link rel="prefetch" href="/assets/js/36.3e7e22ca.js"><link rel="prefetch" href="/assets/js/37.b8683165.js"><link rel="prefetch" href="/assets/js/38.1c86bb9c.js"><link rel="prefetch" href="/assets/js/39.fba09886.js"><link rel="prefetch" href="/assets/js/4.3f57852d.js"><link rel="prefetch" href="/assets/js/41.0508b3e6.js"><link rel="prefetch" href="/assets/js/42.c51c2847.js"><link rel="prefetch" href="/assets/js/43.93e5d495.js"><link rel="prefetch" href="/assets/js/44.45e204ef.js"><link rel="prefetch" href="/assets/js/45.1fe5400f.js"><link rel="prefetch" href="/assets/js/46.1adc7847.js"><link rel="prefetch" href="/assets/js/47.9f86d57c.js"><link rel="prefetch" href="/assets/js/5.a7ce3cbd.js"><link rel="prefetch" href="/assets/js/6.46d1b36f.js"><link rel="prefetch" href="/assets/js/7.e1e7eddb.js"><link rel="prefetch" href="/assets/js/8.8bee4585.js"><link rel="prefetch" href="/assets/js/9.56ff43bb.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">WW's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/accumulate/" class="nav-link">
+  前端基础
+</a></div><div class="nav-item"><a href="/algorithm/" class="nav-link">
+  算法题库
+</a></div><div class="nav-item"><a href="/internship/" class="nav-link">
+  实习日记
+</a></div><div class="nav-item"><a href="/interview/" class="nav-link router-link-active">
+  面试总结
+</a></div><div class="nav-item"><a href="https://github.com/Elvira-wan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  gitgub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/accumulate/" class="nav-link">
+  前端基础
+</a></div><div class="nav-item"><a href="/algorithm/" class="nav-link">
+  算法题库
+</a></div><div class="nav-item"><a href="/internship/" class="nav-link">
+  实习日记
+</a></div><div class="nav-item"><a href="/interview/" class="nav-link router-link-active">
+  面试总结
+</a></div><div class="nav-item"><a href="https://github.com/Elvira-wan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  gitgub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>基础原理积累</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/interview/accumulates/html.html" class="sidebar-link">HTML</a></li><li><a href="/interview/accumulates/css.html" class="sidebar-link">CSS</a></li><li><a href="/interview/accumulates/js.html" class="sidebar-link">JavaScript</a></li><li><a href="/interview/accumulates/optimize.html" class="sidebar-link">前端性能优化</a></li><li><a href="/interview/accumulates/react.html" class="sidebar-link">React</a></li><li><a href="/interview/accumulates/computerNetwork.html" class="sidebar-link">计算机网络</a></li><li><a href="/interview/accumulates/webpack.html" class="sidebar-link">Webpack</a></li><li><a href="/interview/accumulates/ajax.html" class="sidebar-link">AJAX</a></li><li><a href="/interview/accumulates/nodeJS.html" class="sidebar-link">NodeJS</a></li><li><a href="/interview/accumulates/computerBasic.html" class="sidebar-link">计算机基础</a></li><li><a href="/interview/accumulates/func.html" aria-current="page" class="active sidebar-link">一些需要手写的函数</a></li></ul></section></li><li><a href="/interview/summarize.html" class="sidebar-link">秋招复盘</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="一些熟悉的手写函数"><a href="#一些熟悉的手写函数" class="header-anchor">#</a> 一些熟悉的手写函数</h1> <ul><li><p>给你一组数和一个数值，要你返回数值由数组内的数组合而成的所有可能，数组中的数可以无限次使用；</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token parameter">arr<span class="token punctuation">,</span> target</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">var</span> temp <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    arr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> a <span class="token operator">-</span> b<span class="token punctuation">)</span>
+
+    <span class="token keyword">function</span> <span class="token function">getSum</span><span class="token punctuation">(</span><span class="token parameter">arr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> total <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            total <span class="token operator">+=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> total
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token parameter">arr<span class="token punctuation">,</span> target<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> index<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">getSum</span><span class="token punctuation">(</span>temp<span class="token punctuation">)</span> <span class="token operator">+</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                temp<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+                <span class="token keyword">while</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> arr<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//防止重复元素</span>
+                    i<span class="token operator">++</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token function">dfs</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> target<span class="token punctuation">,</span> i<span class="token punctuation">)</span>
+                temp<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">getSum</span><span class="token punctuation">(</span>temp<span class="token punctuation">)</span> <span class="token operator">+</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">===</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                temp<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+                res<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>temp<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                temp<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">dfs</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> target<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> res
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">sum</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li><p>通过reduce来实现map函数：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token class-name">Array</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">map2</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">fn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">prev<span class="token punctuation">,</span> cur</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">fn</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> result
+<span class="token punctuation">}</span>
+ 
+<span class="token keyword">let</span> arr2 <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">map2</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> item <span class="token operator">*</span> <span class="token number">2</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></li> <li><p><a href="https://www.nowcoder.com/jump/super-jump/word?word=%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97" target="_blank" rel="noopener noreferrer">最长递增子序列<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>意思是在一组数字中，找出最长一串递增的数字；</p></li> <li><p>手写深拷贝</p></li> <li><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 打印什么</span>
+Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token number">2</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 1 2</span>
+</code></pre></div></li> <li><p>手写 apply</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>apply2 <span class="token operator">=</span> apply2
+ 
+<span class="token keyword">function</span> <span class="token function">apply2</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> args <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">let</span> obj<span class="token punctuation">.</span>fn <span class="token operator">=</span> <span class="token keyword">this</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arguments<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        args<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'arguments[1]['</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">']'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token function">eval</span><span class="token punctuation">(</span><span class="token string">'obj.fn('</span> <span class="token operator">+</span> args <span class="token operator">+</span> <span class="token string">')'</span><span class="token punctuation">)</span>
+    <span class="token keyword">delete</span> obj<span class="token punctuation">.</span>fn
+    <span class="token keyword">return</span> result
+<span class="token punctuation">}</span>
+ 
+<span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+ 
+<span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+ 
+<span class="token punctuation">}</span>
+f<span class="token punctuation">.</span><span class="token function">apply2</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>手写 Promise.all()</p></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/interview/accumulates/computerBasic.html" class="prev">
+        计算机基础
+      </a></span> <span class="next"><a href="/interview/summarize.html">
+        秋招复盘
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.81d09c15.js" defer></script><script src="/assets/js/2.8398b084.js" defer></script><script src="/assets/js/40.4f536509.js" defer></script>
+  </body>
+</html>

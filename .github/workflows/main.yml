@@ -1,0 +1,25 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: macOS-latest
+    steps:
+    - name: checkout branch master
+      uses: actions/checkout@master
+
+    # 使用云开发 Github Action 部署
+    - name: Deploy static to Tencent CloudBase
+      id: deployStatic
+      uses: TencentCloudBase/cloudbase-action@v2
+      with:
+        # 云开发的访问密钥 secretId 和 secretKey
+        secretId: 'AKIDIDxWs45sTs67tVu56tRmtnW4SefVAdsu'
+        secretKey: 'vhGahaEclfKkuq0zlQvEJF8uYBlMwUvA'
+        # 云开发的环境id
+        envId: 'elvira-wan-6g4sok0zd720c558'
+        # Github 项目静态文件的路径
+        staticSrcPath: ./WW/docs/.vuepress/dist
